@@ -279,8 +279,8 @@ export function blacklisted(window_class: string, title: string): boolean {
 
 export function place_pointer_on(win: Meta.Window) {
     const rect = win.get_frame_rect();
-    const x = rect.x + 8;
-    const y = rect.y + 8;
+    const x = rect.x + rect.width - 12;
+    const y = rect.y + rect.height - 18;
 
     const display = Gdk.DisplayManager.get().get_default_display();
 
